@@ -1,0 +1,15 @@
+<h1>My daily Todo list</h1>
+<button>
+    <a href="/todo-create/">Add Todo</a>
+</button>
+{% for todo in todos %}
+    <p>
+        {{ todo.title }}
+        <button>
+            <a href="/todo_update/{{ todo.pk }}/">Update</a>
+        </button>
+        <button>
+            <a href="/todo-delete/{{ todo.pk }}/">Delete</a>
+        </button>
+    </p>
+{% endfor %}
